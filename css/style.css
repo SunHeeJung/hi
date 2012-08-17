@@ -8,7 +8,7 @@ img {border:none}
 
 
 
-.bg {position:relative; background:url(../images/bg.png) no-repeat; width:1024px; height:768px}
+.bg {position:relative; background:url(../images/bg.png) no-repeat; width:1280px; height:768px}
 h1 {position:absolute; top:368px; left:289px}
 #txt0 {position:absolute; top:76px; left:241px; opacity:0}
 #txt1 {position:absolute; top:136px; left:241px; opacity:0}
