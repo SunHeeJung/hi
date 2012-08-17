@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>  
+<title></title>
+<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+<script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="../js/jquery.transit.min.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<script>
+$(window).ready(function(){
+	for(var i=0; i<4; i++){
+		$("#mn"+i).click(function(e){
+			idx = e.currentTarget.id.substr(2);
+			switch(idx){
+				case "0":
+					alert("1")
+				break;
+				case "1":
+					$("#sub1").css("display", "block").animate({
+						opacity:1
+					}, 500);
+					if(typeof isSign == "undefined"){
+						isSign = true;
+						for(var j=0; j<3; j++){
+							$("#sign"+j).bind("click", function(e){
+								idx = e.currentTarget.id.substr(4)
+								switch(idx){
+									case "0":
+										alert("0")
+									break;
+									case "1":
+										alert("1")
+									break;
+									case "2":
+										alert("2")
+									break;
+								}
+							})
+						}
+					}
+				break;
+				case "2":
+					alert("2")
+				break;
+				case "3":
+					$("#sub3").css("display", "block").animate({
+						opacity:1
+					}, 500);
+					if(typeof isPds == "undefined"){
+						isPds = true;
+						for(var j=0; j<2; j++){
+							$("#pds"+j).bind("click", function(e){
+								idx = e.currentTarget.id.substr(3)
+								switch(idx){
+									case "0":
+										alert("0")
+									break;
+									case "1":
+										alert("1")
+									break;
+								}
+							})
+						}
+					}
+				break;
+			}
+		})
+	}
+	for(var i=0; i<3; i++){
+		$("#rmn"+i).click(function(e){
+			idx = e.currentTarget.id.substr(3);
+			switch(idx){
+				case "0":
+					alert("0")
+				break;
+				case "1":
+					alert("1")
+				break;
+				case "2":
+					alert("2")
+				break;
+			}
+		})
+	}
+	$("#txt0").delay(300).animate({
+		left:441,
+		opacity:1
+	}, 1000);
+	$("#txt1").delay(1000).animate({
+		left:441,
+		opacity:1
+	}, 1000);
+	var i = 0;
+	setInterval(function(){
+		i++
+		$("#logo").transition({
+			perspective: '200px',
+			rotateY: 360*i+'deg'
+		}, 'slow');
+	}, 3000);
+	
+})
+</script>
+</head>
+
+<body>
+
+<div class="bg">
+	<h1 id="logo"><img src="../images/logo.png" alt="현대해상"></h1>
+	<p id="txt0"><img src="../images/txt0.png" alt=""></p>
+	<p id="txt1"><img src="../images/txt1.png" alt=""></p>
+	<ul class="navi">
+		<li id="mn0"><img src="../images/mn0.png" alt=""></li>
+		<li id="mn1">
+			<img src="../images/mn1.png" alt="">
+			<ul id="sub1">
+				<li id="sign0"><img src="../images/sub0.png" alt=""></li>
+				<li id="sign1"><img src="../images/sub1.png" alt=""></li>
+				<li id="sign2"><img src="../images/sub2.png" alt=""></li>
+			</ul>
+		</li>
+		<li id="mn2"><img src="../images/mn2.png" alt=""></li>
+		<li id="mn3">
+			<img src="../images/mn3.png" alt="">
+			<ul id="sub3">
+				<li id="pds0"><img src="../images/sub3.png" alt=""></li>
+				<li id="pds1"><img src="../images/sub4.png" alt=""></li>
+			</ul>
+		</li>
+	</ul>
+	<ul class="rmenu">
+		<li id="rmn0"><img src="../images/rmn0.png" alt=""></li>
+		<li id="rmn1"><img src="../images/rmn1.png" alt=""></li>
+		<li id="rmn2"><img src="../images/rmn2.png" alt=""></li>
+	</ul>
+</div>
+
+</body>
+</html>

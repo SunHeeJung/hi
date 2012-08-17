@@ -1,0 +1,24 @@
+@charset "euc-kr";
+/************* 기본세팅 *************/
+
+* {margin:0; padding:0; list-style:none}
+fieldset {border:none; position:relative}
+legend {display:none}
+img {border:none}
+
+
+
+.bg {position:relative; background:url(../images/bg.png) no-repeat; width:1024px; height:768px}
+h1 {position:absolute; top:368px; left:289px}
+#txt0 {position:absolute; top:76px; left:241px; opacity:0}
+#txt1 {position:absolute; top:136px; left:241px; opacity:0}
+#mn0 {position:absolute; top:274px; left:169px; cursor:pointer}
+#mn1 {position:absolute; top:274px; left:554px; cursor:pointer}
+#mn2 {position:absolute; top:522px; left:169px; cursor:pointer}
+#mn3 {position:absolute; top:522px; left:554px; cursor:pointer}
+#rmn0 {position:absolute; top:295px; left:820px; cursor:pointer}
+#rmn1 {position:absolute; top:357px; left:820px; cursor:pointer}
+#rmn2 {position:absolute; top:422px; left:820px; cursor:pointer}
+#sub1 {position:absolute; top:-36px; left:87px; background:url(../images/bg_sub0.png) no-repeat; width:172px; padding:12px 0 30px 21px; opacity:0; display:none}
+#sub3 {position:absolute; top:-36px; left:87px; background:url(../images/bg_sub1.png) no-repeat; width:172px; padding:12px 0 30px 21px; opacity:0; display:none}
+#sub1 li, #sub3 li {line-height:0; padding:0; margin:0; cursor:pointer}
